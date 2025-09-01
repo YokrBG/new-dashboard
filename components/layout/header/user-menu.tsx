@@ -21,7 +21,7 @@ export default function UserMenu() {
         <Avatar>
           <AvatarImage
             src={`https://bundui-images.netlify.app/avatars/01.png`}
-            alt="shadcn ui kit"
+            alt="lynk"
           />
           <AvatarFallback className="rounded-lg">TB</AvatarFallback>
         </Avatar>
@@ -32,7 +32,7 @@ export default function UserMenu() {
             <Avatar>
               <AvatarImage
                 src={`https://bundui-images.netlify.app/avatars/01.png`}
-                alt="shadcn ui kit"
+                alt="lynk"
               />
               <AvatarFallback className="rounded-lg">TB</AvatarFallback>
             </Avatar>
@@ -45,7 +45,7 @@ export default function UserMenu() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link href="https://shadcnuikit.com/pricing" target="_blank">
+            <Link href="https://getlynk.co" target="_blank">
               <Sparkles /> Upgrade to Pro
             </Link>
           </DropdownMenuItem>

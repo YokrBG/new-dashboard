@@ -15,7 +15,7 @@ export function ProfileCard() {
         <div className="space-y-12">
           <div className="flex flex-col items-center space-y-4">
             <Avatar className="size-20">
-              <AvatarImage src={`https://bundui-images.netlify.app/avatars/10.png`} alt="@shadcn" />
+              <AvatarImage src={`https://bundui-images.netlify.app/avatars/10.png`} alt="@lynk" />
               <AvatarFallback>AH</AvatarFallback>
             </Avatar>
             <div className="text-center">
@@ -51,10 +51,10 @@ export function ProfileCard() {
             <div className="flex items-center gap-3">
               <Link2Icon className="text-muted-foreground size-4" />
               <a
-                href="https://shadcnuikit.com"
+                href="https://getlynk.co"
                 className="hover:text-primary hover:underline"
                 target="_blank">
-                https://shadcnuikit.com
+                https://getlynk.co
               </a>
             </div>
           </div>

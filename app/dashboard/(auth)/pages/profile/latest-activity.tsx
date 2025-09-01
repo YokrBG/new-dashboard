@@ -29,7 +29,7 @@ export function LatestActivity() {
               <BriefcaseBusinessIcon className="text-primary size-3" />
             </span>
             <h3 className="flex items-center font-semibold">
-              Shadcn UI Kit Application UI v2.0.0{" "}
+              Lynk Agent Application UI v2.0.0{" "}
               <Badge variant="outline" className="ms-2">
                 Latest
               </Badge>
@@ -38,8 +38,7 @@ export function LatestActivity() {
               <ClockIcon className="size-3" /> Released on December 2nd, 2025
             </time>
             <p className="text-muted-foreground">
-              Get access to over 20+ pages including a dashboard layout, charts, kanban board,
-              calendar, and pre-order E-commerce & Marketing pages.
+              Get access to the latest Lynk AI Agents.
             </p>
             <Button variant="outline" asChild>
               <Link href="#">
@@ -51,26 +50,24 @@ export function LatestActivity() {
             <span className="bg-muted absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full border">
               <BadgeCheckIcon className="text-primary size-3" />
             </span>
-            <h3 className="font-semibold">Shadcn UI Kit Figma v1.3.0</h3>
+            <h3 className="font-semibold">Lynk v1.3.0</h3>
             <time className="text-muted-foreground flex items-center gap-1.5 text-sm leading-none">
               <ClockIcon className="size-3" /> Released on December 2nd, 2025
             </time>
             <p className="text-muted-foreground">
-              All of the pages and components are first designed in Figma and we keep a parity
-              between the two versions even as we update the project.
+              All of Agents are tailored to your needs.
             </p>
           </li>
           <li className="ms-6 space-y-2">
             <span className="bg-muted absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full border">
               <BriefcaseBusinessIcon className="text-primary size-3" />
             </span>
-            <h3 className="font-semibold">Shadcn UI Kit Library v1.2.2</h3>
+            <h3 className="font-semibold">Lynk Library v1.2.2</h3>
             <time className="text-muted-foreground flex items-center gap-1.5 text-sm leading-none">
-              <ClockIcon className="size-3" /> Released on December 2nd, 2025
+              <ClockIcon className="size-3" /> Released on September 2nd, 2025
             </time>
             <p className="text-muted-foreground">
-              Get started with dozens of web components and interactive elements built on top of
-              Tailwind CSS.
+              Get started with dozens of Agents.
             </p>
           </li>
         </ol>

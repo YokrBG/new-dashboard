@@ -74,7 +74,7 @@ export function Connections() {
             <div key={key} className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <Avatar>
-                  <AvatarImage src={item.avatar} alt="@shadcn" />
+                  <AvatarImage src={item.avatar} alt="@lynk" />
                   <AvatarFallback>{generateAvatarFallback(item.name)}</AvatarFallback>
                 </Avatar>
                 <div>

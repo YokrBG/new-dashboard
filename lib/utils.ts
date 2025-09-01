@@ -23,9 +23,9 @@ export function generateMeta({
   canonical: string;
 }): Metadata {
   return {
-    title: `${title} - Shadcn UI Kit`,
+    title: `${title} - Lynk`,
     description: description,
-    metadataBase: new URL(`https://shadcnuikit.com`),
+    metadataBase: new URL(`https://getlynk.co`),
     alternates: {
       canonical: `/dashboard${canonical}`
     },

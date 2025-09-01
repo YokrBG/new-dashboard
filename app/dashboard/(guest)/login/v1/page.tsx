@@ -24,7 +24,7 @@ export default function Page() {
           width={1000}
           height={1000}
           src={`https://bundui-images.netlify.app/extra/image4.jpg`}
-          alt="shadcn/ui login page"
+          alt="lynk login page"
           className="h-full w-full object-cover"
           unoptimized
         />

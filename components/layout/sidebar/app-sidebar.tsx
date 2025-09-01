@@ -55,7 +55,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton className="hover:text-foreground h-10 group-data-[collapsible=icon]:px-0! hover:bg-[var(--primary)]/5">
                   <Logo />
-                  <span className="font-semibold">Shadcn UI Kit</span>
+                  <span className="font-semibold">Lynk</span>
                   <ChevronsUpDown className="ml-auto group-data-[collapsible=icon]:hidden" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
@@ -102,13 +102,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <CardHeader className="px-3">
             <CardTitle>Download</CardTitle>
             <CardDescription>
-              Unlock lifetime access to all dashboards, templates and components.
+              Unlock access to all chats.
             </CardDescription>
           </CardHeader>
           <CardContent className="px-3">
             <Button className="w-full" asChild>
-              <Link href="https://shadcnuikit.com/pricing" target="_blank">
-                Get Shadcn UI Kit
+              <Link href="https://getlynk.co" target="_blank">
+                Get Lynk
               </Link>
             </Button>
           </CardContent>
