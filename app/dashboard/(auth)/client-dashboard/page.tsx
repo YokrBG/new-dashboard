@@ -4,23 +4,21 @@ import CustomDateRangePicker from "@/components/custom-date-range-picker";
 import { Button } from "@/components/ui/button";
 
 import {
-  ChatWidget,
-  CreditsUsageCard,
-  LatestPayments,
-  SubscriptionsCard,
+  ActiveClientsCard,
+  GeneratedLeadsCard,
+  InboxShortcutCard,
+  SentimentAnalytics,
   TeamMembersCard,
-  TotalRevenueCard,
+  TotalConversationsCard,
   WhiteLabelAnalytics
-} from "@/app/dashboard/(auth)/default/components";
+} from "@/app/dashboard/(auth)/client-dashboard/components";
 import { Download } from "lucide-react";
-import { toast } from "sonner";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "White Label Dashboard",
-    description:
-      "The White Label dashboard provides an overview of your credits, revenues and clients.",
-    canonical: "/default"
+    title: "Agents Dashboard",
+    description: "The Agents dashboard provides an overview of your conversations, leads and clients.",
+    canonical: "/agents"
   });
 }
 
@@ -28,7 +26,7 @@ export default function Page() {
   return (
     <div className="space-y-4">
       <div className="flex flex-row items-center justify-between">
-        <h1 className="text-xl font-bold tracking-tight lg:text-2xl">Dashboard</h1>
+        <h1 className="text-xl font-bold tracking-tight lg:text-2xl">Agents Dashboard</h1>
         <div className="flex items-center space-x-2">
           <CustomDateRangePicker />
           <Button>
@@ -38,17 +36,17 @@ export default function Page() {
         </div>
       </div>
       <div className="gap-4 space-y-4 lg:grid lg:grid-cols-3 lg:space-y-0">
-        <SubscriptionsCard /> {/* nb of clients */}
-        <CreditsUsageCard /> {/* used credits */}
-        <TotalRevenueCard /> {/* generated revenue */}
+        <TotalConversationsCard />
+        <GeneratedLeadsCard />
+        <ActiveClientsCard />
         <TeamMembersCard />
         <div className="lg:col-span-2">
-          <WhiteLabelAnalytics /> {/* component exercice minutes tsx */}
+          <InboxShortcutCard />
         </div>
         <div className="lg:col-span-2">
-          <LatestPayments />
+          <WhiteLabelAnalytics />
         </div>
-        <ChatWidget /> {/* used as customer support for the clients of the wl? */}
+        <SentimentAnalytics />
       </div>
     </div>
   );

@@ -49,7 +49,8 @@ import {
   type LucideIcon,
   GithubIcon,
   RedoDotIcon,
-  BrushCleaningIcon
+  BrushCleaningIcon,
+  KanbanIcon
 } from "lucide-react";
 import Link from "next/link";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -79,14 +80,27 @@ type NavItem = {
 }[];
 
 export const navItems: NavGroup[] = [
-  {
-    title: "Dashboards",
-    items: [
+  {title: "Dashboard",
+    items: [      
       {
-        title: "Default",
+        title: "Default Dashboard",
         href: "/dashboard/default",
         icon: ChartPieIcon
       },
+      {
+        title: "Agents Dashboard",
+        href: "/dashboard/client-dashboard",
+        icon: KanbanIcon
+      },
+    ]
+  },{title: "AI Agents",
+    items: [      
+      
+    ]
+  },
+  {
+    title: "Dashboards",
+    items: [
       {
         title: "E-commerce",
         href: "#",
