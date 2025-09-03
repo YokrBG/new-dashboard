@@ -48,7 +48,7 @@ const chartConfig = {
   }
 } satisfies ChartConfig;
 
-export function ExerciseMinutes() {
+export function WhiteLabelAnalytics() {
   return (
     <Card className="h-full">
       <CardHeader className="flex items-start justify-between">

@@ -5,21 +5,21 @@ import { Button } from "@/components/ui/button";
 
 import {
   ChatWidget,
-  ExerciseMinutes,
   LatestPayments,
   PaymentMethodCard,
   SubscriptionsCard,
   TeamMembersCard,
-  TotalRevenueCard
+  TotalRevenueCard,
+  WhiteLabelAnalytics
 } from "@/app/dashboard/(auth)/default/components";
 import { Download } from "lucide-react";
 import { toast } from "sonner";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Admin Dashboard",
+    title: "White Label Dashboard",
     description:
-      "The admin dashboard template offers a sleek and efficient interface for monitoring important data and user interactions. Built with shadcn/ui.",
+      "The White Label dashboard provides an overview of your credits, revenues and clients.",
     canonical: "/default"
   });
 }
@@ -38,17 +38,17 @@ export default function Page() {
         </div>
       </div>
       <div className="gap-4 space-y-4 lg:grid lg:grid-cols-3 lg:space-y-0">
+        <SubscriptionsCard /> {/* nb of clients */}
+        <SubscriptionsCard /> {/* used credits */}
+        <TotalRevenueCard /> {/* generated revenue */}
         <TeamMembersCard />
-        <SubscriptionsCard />
-        <TotalRevenueCard />
-        <ChatWidget />
         <div className="lg:col-span-2">
-          <ExerciseMinutes />
+          <WhiteLabelAnalytics /> {/* component exercice minutes tsx */}
         </div>
         <div className="lg:col-span-2">
           <LatestPayments />
         </div>
-        <PaymentMethodCard />
+        <ChatWidget /> {/* maybe we can use as customer support? */}
       </div>
     </div>
   );
