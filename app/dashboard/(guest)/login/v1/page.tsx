@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { GithubIcon } from "lucide-react";
 import { generateMeta } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ export function generateMetadata() {
   return generateMeta({
     title: "Login Page",
     description:
-      "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account.",
+      "Sign in with your email and password to access your account.",
     canonical: "/login/v1"
   });
 }
@@ -34,14 +33,16 @@ export default function Page() {
         <div className="w-full max-w-md space-y-8 px-4">
           <div className="text-center">
             <h2 className="mt-6 text-3xl font-bold">Welcome back</h2>
-            <p className="text-muted-foreground mt-2 text-sm">Please sign in to your account</p>
+            <p className="text-muted-foreground mt-2 text-sm">
+              Sign in to your account and continue building
+            </p>
           </div>
 
           <form className="mt-8 space-y-6">
             <div className="space-y-4">
               <div>
                 <Label htmlFor="email" className="sr-only">
-                  Email address
+                  Email Address
                 </Label>
                 <Input
                   id="email"
@@ -50,7 +51,7 @@ export default function Page() {
                   autoComplete="email"
                   required
                   className="w-full"
-                  placeholder="Email address"
+                  placeholder="Enter your email"
                 />
               </div>
               <div>
@@ -64,7 +65,7 @@ export default function Page() {
                   autoComplete="current-password"
                   required
                   className="w-full"
-                  placeholder="Password"
+                  placeholder="Enter your password"
                 />
               </div>
               <div className="text-end">
@@ -78,12 +79,12 @@ export default function Page() {
 
             <div>
               <Button type="submit" className="w-full">
-                Sign in
+                Sign In
               </Button>
             </div>
           </form>
 
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <div className="flex items-center gap-3">
               <div className="w-full border-t" />
               <span className="text-muted-foreground shrink-0 text-sm">or continue with</span>
@@ -124,6 +125,13 @@ export default function Page() {
                 Sign up
               </Link>
             </div>
+          </div> */}
+
+          <div className="mt-6 text-center text-sm">
+            Don&apos;t have an account?{" "}
+            <Link href="/dashboard/register/v1" className="underline">
+              Create account
+            </Link>
           </div>
         </div>
       </div>

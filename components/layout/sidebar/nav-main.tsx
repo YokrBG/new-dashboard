@@ -103,7 +103,7 @@ export const navItems: NavGroup[] = [
       { title: "Sales", href: "/dashboard/sales", icon: BadgeDollarSignIcon },
       { title: "CRM", href: "/dashboard/crm", icon: ChartBarDecreasingIcon },
       {
-        title: "Website Analytics",
+        title: "Analytics",
         href: "/dashboard/website-analytics",
         icon: GaugeIcon
       },
@@ -113,11 +113,10 @@ export const navItems: NavGroup[] = [
         icon: FolderDotIcon
       },
       {
-        title: "File Manager",
+        title: "Knowledge Manager",
         href: "/dashboard/file-manager",
         icon: FolderIcon
       },
-      { title: "Crypto", href: "/dashboard/crypto", icon: WalletMinimalIcon },
       { title: "Academy/School", href: "/dashboard/academy", icon: GraduationCapIcon },
       { title: "Hospital Management", href: "/dashboard/hospital-management", icon: ActivityIcon },
       { title: "Hotel Dashboard", href: "/dashboard/hotel", icon: Building2Icon, isComing: true },
@@ -127,7 +126,7 @@ export const navItems: NavGroup[] = [
   {
     title: "AI",
     items: [
-      { title: "AI Chat", href: "/dashboard/apps/ai-chat", icon: BrainIcon },
+      { title: "AI Settings", href: "/dashboard/apps/ai-chat", icon: BrainIcon },
       {
         title: "AI Chat V2",
         href: "/dashboard/apps/ai-chat",
@@ -152,8 +151,8 @@ export const navItems: NavGroup[] = [
         isComing: true
       },
       { title: "Notes", href: "/dashboard/apps/notes", icon: StickyNoteIcon, isDataBadge: "8" },
-      { title: "Chats", href: "/dashboard/apps/chat", icon: MessageSquareIcon, isDataBadge: "5" },
-      { title: "Mail", href: "/dashboard/apps/mail", icon: MailIcon, isNew: true },
+      { title: "Inbox", href: "/dashboard/apps/chat", icon: MessageSquareIcon, isDataBadge: "5" },
+      { title: "Leads", href: "/dashboard/apps/mail", icon: MailIcon, isNew: true },
       {
         title: "Todo List App",
         href: "/dashboard/apps/todo-list-app",
@@ -231,11 +230,8 @@ export const navItems: NavGroup[] = [
         href: "/",
         icon: FingerprintIcon,
         items: [
-          { title: "Login v1", href: "/dashboard/login/v1" },
-          { title: "Login v2", href: "/dashboard/login/v2" },
-          { title: "Register v1", href: "/dashboard/register/v1" },
-          { title: "Register v2", href: "/dashboard/register/v2" },
-          { title: "Forgot Password", href: "/dashboard/forgot-password" }
+          { title: "Login", href: "/dashboard/login/v1" },
+          { title: "Register", href: "/dashboard/register/v1" },
         ]
       },
       {
@@ -254,7 +250,7 @@ export const navItems: NavGroup[] = [
     title: "Others",
     items: [
       {
-        title: "Download Shadcn UI Kit",
+        title: "Get Lynk Pro",
         href: "/pricing",
         icon: ClipboardMinusIcon,
         newTab: true

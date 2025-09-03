@@ -33,7 +33,7 @@ export default function Page() {
           <CustomDateRangePicker />
           <Button>
             <Download />
-            <span className="hidden lg:inline">Download</span>
+            <span className="hidden lg:inline">Export</span>
           </Button>
         </div>
       </div>

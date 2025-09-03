@@ -55,7 +55,7 @@ export function SubscriptionsCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Subscriptions</CardTitle>
+        <CardTitle>Clients</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="font-display text-3xl leading-6">+4850</div>

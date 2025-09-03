@@ -1,17 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { generateMeta } from "@/lib/utils";
-import { GithubIcon } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "Register Page",
     description:
-      "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account.",
+      "Create an account with your email and password to start building.",
     canonical: "/register/v1"
   });
 }
@@ -33,40 +32,17 @@ export default function Page() {
       <div className="flex w-full items-center justify-center lg:w-1/2">
         <div className="w-full max-w-md space-y-8 px-4">
           <div className="text-center">
-            <h2 className="mt-6 text-3xl font-bold">Create New Account</h2>
+            <h2 className="mt-6 text-3xl font-bold">Join Lynk</h2>
+            <p className="text-muted-foreground mt-2 text-sm">
+              Create your account and start building something amazing
+            </p>
           </div>
 
           <form className="mt-8 space-y-6">
             <div className="space-y-4">
               <div>
-                <Label htmlFor="first_name" className="sr-only">
-                  First name
-                </Label>
-                <Input
-                  id="first_name"
-                  name="first_name"
-                  type="text"
-                  required
-                  className="w-full"
-                  placeholder="First name"
-                />
-              </div>
-              <div>
-                <Label htmlFor="last_name" className="sr-only">
-                  Last name
-                </Label>
-                <Input
-                  id="last_name"
-                  name="last_name"
-                  type="text"
-                  required
-                  className="w-full"
-                  placeholder="Last name"
-                />
-              </div>
-              <div>
                 <Label htmlFor="email" className="sr-only">
-                  Email address
+                  Email Address
                 </Label>
                 <Input
                   id="email"
@@ -75,7 +51,7 @@ export default function Page() {
                   autoComplete="email"
                   required
                   className="w-full"
-                  placeholder="Email address"
+                  placeholder="Enter your email"
                 />
               </div>
               <div>
@@ -86,22 +62,60 @@ export default function Page() {
                   id="password"
                   name="password"
                   type="password"
-                  autoComplete="current-password"
+                  autoComplete="new-password"
                   required
                   className="w-full"
-                  placeholder="Password"
+                  placeholder="Create a strong password"
+                />
+              </div>
+              <div>
+                <Label htmlFor="confirm-password" className="sr-only">
+                  Confirm Password
+                </Label>
+                <Input
+                  id="confirm-password"
+                  name="confirm-password"
+                  type="password"
+                  autoComplete="new-password"
+                  required
+                  className="w-full"
+                  placeholder="Repeat your password"
                 />
               </div>
             </div>
 
+            <div className="space-y-2">
+              <p className="text-sm font-medium">Choose Your Path</p>
+              <RadioGroup defaultValue="rebrand" className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <RadioGroupItem value="rebrand" id="rebrand" className="mt-1" />
+                  <Label htmlFor="rebrand" className="cursor-pointer">
+                    <span className="block font-medium">Rebrand this solution</span>
+                    <span className="text-muted-foreground text-sm">
+                      Customize and white-label this platform with your own branding
+                    </span>
+                  </Label>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <RadioGroupItem value="use" id="use" className="mt-1" />
+                  <Label htmlFor="use" className="cursor-pointer">
+                    <span className="block font-medium">Use this solution</span>
+                    <span className="text-muted-foreground text-sm">
+                      Start using the platform immediately with existing features
+                    </span>
+                  </Label>
+                </div>
+              </RadioGroup>
+            </div>
+
             <div>
               <Button type="submit" className="w-full">
-                Register
+                Create Account
               </Button>
             </div>
           </form>
 
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <div className="flex items-center gap-3">
               <div className="w-full border-t" />
               <span className="text-muted-foreground shrink-0 text-sm">or continue with</span>
@@ -135,13 +149,13 @@ export default function Page() {
                 GitHub
               </Button>
             </div>
+          </div> */}
 
-            <div className="mt-6 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <Link href="/dashboard/register/v1" className="underline">
-                Sign up
-              </Link>
-            </div>
+          <div className="mt-6 text-center text-sm">
+            Already have an account?{" "}
+            <Link href="/dashboard/login/v1" className="underline">
+              Sign in
+            </Link>
           </div>
         </div>
       </div>

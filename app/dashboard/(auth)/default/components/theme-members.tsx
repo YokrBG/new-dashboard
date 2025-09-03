@@ -20,7 +20,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 const roles = [
   {
     id: 1,
-    name: "Viewer",
+    name: "All Plans",
     description: "Can view and comment."
   },
   {
@@ -43,22 +43,19 @@ const roles = [
 const members = [
   {
     id: 1,
-    name: "Toby Belhome",
-    email: "contact@bundui.io",
+    name: "Linkedin Outreach",
     avatar: `https://bundui-images.netlify.app/avatars/01.png`,
     role_id: 1
   },
   {
     id: 2,
-    name: "Jackson Lee",
-    email: "pre@example.com",
+    name: "Email Outreach",
     avatar: `https://bundui-images.netlify.app/avatars/02.png`,
     role_id: 2
   },
   {
     id: 3,
-    name: "Hally Gray",
-    email: "hally@site.com",
+    name: "Web Chatbot",
     avatar: `https://bundui-images.netlify.app/avatars/03.png`,
     role_id: 1
   }
@@ -71,8 +68,8 @@ export function TeamMembersCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Team Members</CardTitle>
-        <CardDescription>Invite your team members to collaborate.</CardDescription>
+        <CardTitle>Online Agents</CardTitle>
+        <CardDescription>Select your Agents</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6">
         {data.map((member, key) => (
@@ -84,7 +81,6 @@ export function TeamMembersCard() {
               </Avatar>
               <div>
                 <p className="text-sm leading-none font-medium">{member.name}</p>
-                <p className="text-muted-foreground text-sm">{member.email}</p>
               </div>
             </div>
             <Popover

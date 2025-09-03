@@ -53,9 +53,9 @@ export function ExerciseMinutes() {
     <Card className="h-full">
       <CardHeader className="flex items-start justify-between">
         <div className="space-y-1.5">
-          <CardTitle>Exercise Minutes</CardTitle>
+          <CardTitle>Analytics</CardTitle>
           <CardDescription>
-            Your exercise minutes are ahead of where you normally are.
+            Your Analytics
           </CardDescription>
         </div>
         <ExportButton />

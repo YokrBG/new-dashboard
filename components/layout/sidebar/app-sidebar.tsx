@@ -100,15 +100,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <Card className="gap-4 overflow-hidden py-4 group-data-[collapsible=icon]:hidden">
           <CardHeader className="px-3">
-            <CardTitle>Download</CardTitle>
+            <CardTitle>Upgrade</CardTitle>
             <CardDescription>
-              Unlock access to all chats.
+              Get access to more AI agents.
             </CardDescription>
           </CardHeader>
           <CardContent className="px-3">
             <Button className="w-full" asChild>
               <Link href="https://getlynk.co" target="_blank">
-                Get Lynk
+                Get Lynk PRO
               </Link>
             </Button>
           </CardContent>
