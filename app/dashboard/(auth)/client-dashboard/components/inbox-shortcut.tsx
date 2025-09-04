@@ -189,11 +189,6 @@ const columns: ColumnDef<Conversation>[] = [
     cell: ({ row }) => formatTimeToNow(row.getValue("createdAt") as Date)
   },
   {
-    id: "analytics",
-    header: "Analytics",
-    cell: () => "-"
-  },
-  {
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => {

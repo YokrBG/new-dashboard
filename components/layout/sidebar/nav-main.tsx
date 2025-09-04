@@ -59,7 +59,8 @@ import {
   BotIcon,
   TagsIcon,
   BookOpenIcon,
-  TagIcon
+  TagIcon,
+  WorkflowIcon
 } from "lucide-react";
 import Link from "next/link";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -119,7 +120,7 @@ export const navItems: NavGroup[] = [
       {
         title: "Integrations",
         href: "/dashboard/integrations",
-        icon: KanbanIcon
+        icon: WorkflowIcon
       },
       {
         title: "AI To-Do List",
@@ -158,211 +159,14 @@ export const navItems: NavGroup[] = [
         href: "/dashboard/pages/empty-states/01",
         icon: BrushCleaningIcon,
         items: [
-          { title: "Account", href: "/dashboard/pages/empty-states/01" },
-          { title: "Billing", href: "/dashboard/pages/empty-states/02" },
+          { title: "Account", href: "/dashboard/pages/settings/account" },
+          { title: "Billing", href: "/dashboard/pages/billing" },
           { title: "Notifications", href: "/dashboard/pages/settings/notifications" },
           { title: "API Keys", href: "/dashboard/apps/api-keys" }
         ]
       },
     ]
   },
-  /*{
-    title: "Dashboards",
-    items: [
-      {
-        title: "E-commerce",
-        href: "#",
-        icon: ShoppingBagIcon,
-        items: [
-          { title: "Dashboard", href: "/dashboard/ecommerce" },
-          { title: "Product List", href: "/dashboard/pages/products" },
-          { title: "Product Detail", href: "/dashboard/pages/products/1" },
-          { title: "Add Product", href: "/dashboard/pages/products/create" },
-          { title: "Order List", href: "/dashboard/pages/orders" },
-          { title: "Order Detail", href: "/dashboard/pages/orders/detail" }
-        ]
-      },
-      { title: "Sales", href: "/dashboard/sales", icon: BadgeDollarSignIcon },
-      { title: "CRM", href: "/dashboard/crm", icon: ChartBarDecreasingIcon },
-      {
-        title: "Analytics",
-        href: "/dashboard/website-analytics",
-        icon: GaugeIcon
-      },
-      {
-        title: "Project Management",
-        href: "/dashboard/project-management",
-        icon: FolderDotIcon
-      },
-      {
-        title: "Knowledge Manager",
-        href: "/dashboard/file-manager",
-        icon: FolderIcon
-      },
-      { title: "Academy/School", href: "/dashboard/academy", icon: GraduationCapIcon },
-      { title: "Hospital Management", href: "/dashboard/hospital-management", icon: ActivityIcon },
-      { title: "Hotel Dashboard", href: "/dashboard/hotel", icon: Building2Icon, isComing: true },
-      { title: "Finance", href: "/dashboard/finance", icon: WalletMinimalIcon, isNew: true }
-    ]
-  },
-  {
-    title: "AI",
-    items: [
-      { title: "AI Settings", href: "/dashboard/apps/ai-chat", icon: BrainIcon },
-      {
-        title: "AI Chat V2",
-        href: "/dashboard/apps/ai-chat",
-        icon: BrainCircuitIcon,
-        isComing: true
-      },
-      {
-        title: "Image Generator",
-        href: "/dashboard/apps/ai-image-generator",
-        icon: ImagesIcon,
-        isNew: true
-      }
-    ]
-  },
-  {
-    title: "Apps",
-    items: [
-      {
-        title: "Kanban",
-        href: "/dashboard/apps/kanban",
-        icon: SquareKanbanIcon,
-        isComing: true
-      },
-      { title: "Notes", href: "/dashboard/apps/notes", icon: StickyNoteIcon, isDataBadge: "8" },
-      { title: "Inbox", href: "/dashboard/apps/chat", icon: MessageSquareIcon, isDataBadge: "5" },
-      { title: "Leads", href: "/dashboard/apps/mail", icon: MailIcon, isNew: true },
-      {
-        title: "Todo List App",
-        href: "/dashboard/apps/todo-list-app",
-        icon: SquareCheckIcon,
-        isNew: true
-      },
-      {
-        title: "Tasks",
-        href: "/dashboard/apps/tasks",
-        icon: ClipboardCheckIcon
-      },
-      { title: "Calendar", href: "/dashboard/apps/calendar", icon: CalendarIcon },
-      {
-        title: "File Manager",
-        href: "/dashboard/apps/file-manager",
-        icon: ArchiveRestoreIcon,
-        isComing: true
-      },
-      { title: "Api Keys", href: "/dashboard/apps/api-keys", icon: KeyIcon },
-      { title: "POS App", href: "/dashboard/apps/pos-system", icon: CookieIcon }
-    ]
-  },
-  {
-    title: "Pages",
-    items: [
-      {
-        title: "Users List",
-        href: "/dashboard/pages/users",
-        icon: UsersIcon
-      },
-      {
-        title: "Profile",
-        href: "/dashboard/pages/profile",
-        icon: UserIcon
-      },
-      {
-        title: "Onboarding Flow",
-        href: "/dashboard/pages/onboarding-flow",
-        icon: RedoDotIcon
-      },
-      {
-        title: "Empty States",
-        href: "/dashboard/pages/empty-states/01",
-        icon: BrushCleaningIcon,
-        items: [
-          { title: "Empty States 01", href: "/dashboard/pages/empty-states/01" },
-          { title: "Empty States 02", href: "/dashboard/pages/empty-states/02" },
-          { title: "Empty States 03", href: "/dashboard/pages/empty-states/03" }
-        ]
-      },
-      {
-        title: "Settings",
-        href: "/dashboard/pages/settings",
-        icon: SettingsIcon,
-        items: [
-          { title: "Profile", href: "/dashboard/pages/settings" },
-          { title: "Account", href: "/dashboard/pages/settings/account" },
-          { title: "Appearance", href: "/dashboard/pages/settings/appearance" },
-          { title: "Notifications", href: "/dashboard/pages/settings/notifications" },
-          { title: "Display", href: "/dashboard/pages/settings/display" }
-        ]
-      },
-      {
-        title: "Pricing",
-        href: "#",
-        icon: BadgeDollarSignIcon,
-        items: [
-          { title: "Column Pricing", href: "/dashboard/pages/pricing/column" },
-          { title: "Table Pricing", href: "/dashboard/pages/pricing/table" },
-          { title: "Single Pricing", href: "/dashboard/pages/pricing/single" }
-        ]
-      },
-      {
-        title: "Authentication",
-        href: "/",
-        icon: FingerprintIcon,
-        items: [
-          { title: "Login", href: "/dashboard/login/v1" },
-          { title: "Register", href: "/dashboard/register/v1" },
-        ]
-      },
-      {
-        title: "Error Pages",
-        href: "/",
-        icon: FingerprintIcon,
-        items: [
-          { title: "404", href: "/dashboard/pages/error/404" },
-          { title: "500", href: "/dashboard/pages/error/500" },
-          { title: "403", href: "/dashboard/pages/error/403" }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Others",
-    items: [
-      {
-        title: "Get Lynk Pro",
-        href: "/pricing",
-        icon: ClipboardMinusIcon,
-        newTab: true
-      },
-      {
-        title: "Components",
-        href: "/components",
-        icon: ComponentIcon,
-        newTab: true
-      },
-      {
-        title: "Blocks",
-        href: "/blocks",
-        icon: ComponentIcon,
-        newTab: true
-      },
-      {
-        title: "Templates",
-        href: "/templates",
-        icon: ProportionsIcon,
-        newTab: true
-      },
-      {
-        title: "Github",
-        href: "https://github.com/bundui",
-        icon: GithubIcon,
-        newTab: true
-      }
-    ]
-  }*/
 ];
 
 export function NavMain() {

@@ -1,4 +1,3 @@
-import { SidebarNav } from "./sidebar-nav";
 import { generateMeta } from "@/lib/utils";
 
 export async function generateMetadata() {
@@ -10,28 +9,6 @@ export async function generateMetadata() {
   });
 }
 
-const sidebarNavItems = [
-  {
-    title: "Profile",
-    href: "/dashboard/pages/settings"
-  },
-  {
-    title: "Account",
-    href: "/dashboard/pages/settings/account"
-  },
-  {
-    title: "Appearance",
-    href: "/dashboard/pages/settings/appearance"
-  },
-  {
-    title: "Notifications",
-    href: "/dashboard/pages/settings/notifications"
-  },
-  {
-    title: "Display",
-    href: "/dashboard/pages/settings/display"
-  }
-];
 
 export default function SettingsLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -42,11 +19,8 @@ export default function SettingsLayout({ children }: { children: React.ReactNode
           Manage your account settings and set e-mail preferences.
         </p>
       </div>
-      <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-6">
-        <div className="flex-1 lg:max-w-2xl">{children}</div>
-        <aside className="lg:w-1/5">
-          <SidebarNav items={sidebarNavItems} />
-        </aside>
+      <div className="flex flex-col space-y-8">
+        <div className="flex-1">{children}</div>
       </div>
     </>
   );

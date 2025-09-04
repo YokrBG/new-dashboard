@@ -6,7 +6,13 @@ import { Check, ChevronsDownIcon } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -16,28 +22,35 @@ import {
   CommandList
 } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Progress } from "@/components/ui/progress";
+
+/** ===== Element A, adapted (no CardAction) ===== */
+function UpgradePlanCard({ used = 215, limit = 2000 }: { used?: number; limit?: number }) {
+  const pct = Math.min(100, Math.round((used / limit) * 100));
+  return (
+    <Card>
+      <CardHeader className="flex items-start justify-between space-y-0">
+        <CardTitle>Developer Plan</CardTitle>
+        <Button variant="outline" size="sm" className="-mt-1">
+          Upgrade Plan
+        </Button>
+      </CardHeader>
+      <CardContent className="space-y-2">
+        <Progress value={pct} />
+        <div className="text-muted-foreground text-sm">
+          You used {used} of {limit} credits
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+/** ============================================= */
 
 const roles = [
-  {
-    id: 1,
-    name: "All Plans",
-    description: "Can view and comment."
-  },
-  {
-    id: 2,
-    name: "Developer",
-    description: "Can view, comment and edit."
-  },
-  {
-    id: 3,
-    name: "Billing",
-    description: "Can view, comment and manage billing."
-  },
-  {
-    id: 4,
-    name: "Owner",
-    description: "Admin-level access to all resources."
-  }
+  { id: 1, name: "All Plans", description: "Can view and comment." },
+  { id: 2, name: "Developer", description: "Can view, comment and edit." },
+  { id: 3, name: "Billing", description: "Can view, comment and manage billing." },
+  { id: 4, name: "Owner", description: "Admin-level access to all resources." }
 ];
 
 const members = [
@@ -67,10 +80,18 @@ export function ClientCreditsDashboard() {
 
   return (
     <Card>
-      <CardHeader>
+      {/* Credits card on top */}
+      <CardContent className="pb-0">
+        <UpgradePlanCard used={215} limit={2000} />
+      </CardContent>
+
+      {/* Online Agents header below */}
+      <CardHeader className="pt-6">
         <CardTitle>Online Agents</CardTitle>
         <CardDescription>Select your Agents</CardDescription>
       </CardHeader>
+
+      {/* Agents list */}
       <CardContent className="grid gap-6">
         {data.map((member, key) => (
           <div key={key} className="flex items-center justify-between space-x-4">
@@ -85,7 +106,8 @@ export function ClientCreditsDashboard() {
             </div>
             <Popover
               open={openIndex === key}
-              onOpenChange={(isOpen) => setOpenIndex(isOpen ? key : null)}>
+              onOpenChange={(isOpen) => setOpenIndex(isOpen ? key : null)}
+            >
               <PopoverTrigger asChild>
                 <Button variant="outline" className="ml-auto">
                   {roles.find((role) => role.id === member.role_id)?.name}{" "}
@@ -98,18 +120,19 @@ export function ClientCreditsDashboard() {
                   <CommandList>
                     <CommandEmpty>No roles found.</CommandEmpty>
                     <CommandGroup>
-                      {roles.map((role, key) => (
+                      {roles.map((role, rk) => (
                         <CommandItem
-                          key={key}
-                          onSelect={(currentValue) => {
-                            setData((prevData) =>
-                              prevData.map((m) =>
+                          key={rk}
+                          onSelect={() => {
+                            setData((prev) =>
+                              prev.map((m) =>
                                 m.id === member.id ? { ...m, role_id: role.id } : m
                               )
                             );
                             setOpenIndex(null);
                           }}
-                          className="teamaspace-y-1 flex items-start px-4 py-2">
+                          className="flex items-start px-4 py-2 space-y-1"
+                        >
                           <div>
                             <p>{role.name}</p>
                             <p className="text-muted-foreground text-sm">{role.description}</p>
