@@ -50,7 +50,15 @@ import {
   GithubIcon,
   RedoDotIcon,
   BrushCleaningIcon,
-  KanbanIcon
+  KanbanIcon,
+  InboxIcon,
+  ChartBar,
+  TrainIcon,
+  LightbulbIcon,
+  BookAIcon,
+  BotIcon,
+  TagsIcon,
+  BookOpenIcon
 } from "lucide-react";
 import Link from "next/link";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -62,6 +70,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+import { ChatBubbleIcon } from "@radix-ui/react-icons";
 
 type NavGroup = {
   title: string;
@@ -92,10 +101,52 @@ export const navItems: NavGroup[] = [
         href: "/dashboard/client-dashboard",
         icon: KanbanIcon
       },
+      {
+        title: "Inbox",
+        href: "/dashboard/apps/mail",
+        icon: MailIcon
+      },
     ]
-  },{title: "AI Agents",
-    items: [      
-      
+  },
+  {title: "AI Agents",
+    items: [ 
+      {
+        title: "AI Outreach",
+        href: "/dashboard/outreach",
+        icon: MessageSquareIcon
+      },      
+      {
+        title: "Integrations",
+        href: "/dashboard/client-dashboard",
+        icon: KanbanIcon
+      },
+      {
+        title: "AI To-Do List",
+        href: "/dashboard/apps/todo-list-app",
+        icon: SquareCheckIcon
+      },
+      { title: "Agent Settings",
+        href: "/dashboard/client-dashboard",
+        icon: BotIcon
+      },
+      { title: "Knowledge Training",
+        href: "/dashboard/knowlegde",
+        icon: BookOpenIcon
+      },
+    ]
+  },
+    {title: "Settings",
+    items: [ 
+      {
+        title: "User Management",
+        href: "/dashboard/users",
+        icon: UserIcon
+      },      
+      {
+        title: "White Label Settings",
+        href: "/dashboard/white-label",
+        icon: TagsIcon
+      },
     ]
   },
   {
