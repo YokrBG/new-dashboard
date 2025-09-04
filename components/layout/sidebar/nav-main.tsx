@@ -118,7 +118,7 @@ export const navItems: NavGroup[] = [
       },      
       {
         title: "Integrations",
-        href: "/dashboard/client-dashboard",
+        href: "/dashboard/integrations",
         icon: KanbanIcon
       },
       {
@@ -127,7 +127,7 @@ export const navItems: NavGroup[] = [
         icon: SquareCheckIcon
       },
       { title: "Agent Settings",
-        href: "/dashboard/client-dashboard",
+        href: "/dashboard/agent-settings",
         icon: BotIcon
       },
       { title: "Knowledge Training",
