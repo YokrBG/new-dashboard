@@ -131,7 +131,7 @@ export const navItems: NavGroup[] = [
         icon: BotIcon
       },
       { title: "Knowledge Training",
-        href: "/dashboard/apps/tasks",
+        href: "/dashboard/file-manager",
         icon: BookOpenIcon
       },
     ]
