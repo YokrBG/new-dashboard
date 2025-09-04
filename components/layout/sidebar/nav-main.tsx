@@ -58,7 +58,8 @@ import {
   BookAIcon,
   BotIcon,
   TagsIcon,
-  BookOpenIcon
+  BookOpenIcon,
+  TagIcon
 } from "lucide-react";
 import Link from "next/link";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -130,7 +131,7 @@ export const navItems: NavGroup[] = [
         icon: BotIcon
       },
       { title: "Knowledge Training",
-        href: "/dashboard/knowlegde",
+        href: "/dashboard/apps/tasks",
         icon: BookOpenIcon
       },
     ]
@@ -139,13 +140,29 @@ export const navItems: NavGroup[] = [
     items: [ 
       {
         title: "User Management",
-        href: "/dashboard/users",
+        href: "/dashboard/pages/users",
         icon: UserIcon
       },      
       {
-        title: "White Label Settings",
-        href: "/dashboard/white-label",
-        icon: TagsIcon
+        title: "White Label",
+        href: "/dashboard/pages/empty-states/01",
+        icon: TagIcon,
+        items: [
+          { title: "Appearance", href: "/dashboard/pages/empty-states/01" },
+          { title: "Plans", href: "/dashboard/apps/api-keys" },
+          { title: "Clients Billing", href: "/dashboard/pages/empty-states/02" },
+        ]
+      },
+      {
+        title: "Account Settings",
+        href: "/dashboard/pages/empty-states/01",
+        icon: BrushCleaningIcon,
+        items: [
+          { title: "Account", href: "/dashboard/pages/empty-states/01" },
+          { title: "Billing", href: "/dashboard/pages/empty-states/02" },
+          { title: "Notifications", href: "/dashboard/pages/settings/notifications" },
+          { title: "API Keys", href: "/dashboard/apps/api-keys" }
+        ]
       },
     ]
   },

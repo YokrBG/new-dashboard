@@ -8,7 +8,7 @@ import {
   MoreVertical,
   Reply,
   ReplyAll,
-  Trash2
+  Trash2,
 } from "lucide-react";
 import { useMailStore } from "@/app/dashboard/(auth)/apps/mail/use-mail";
 

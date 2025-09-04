@@ -3,11 +3,11 @@
 import {
   AlertCircle,
   Archive,
-  ArchiveX,
-  File,
+  Bot,
   Inbox,
+  Mail,
   MessagesSquare,
-  Send,
+  Phone,
   ShoppingCart,
   Trash2,
   Users2
@@ -41,27 +41,33 @@ export function NavDesktop({ isCollapsed }: NavDesktopProps) {
         isCollapsed={isCollapsed}
         links={[
           {
-            title: "Inbox",
+            title: "All Inboxes",
             label: "128",
             icon: Inbox,
             variant: "default"
           },
           {
-            title: "Drafts",
+            title: "Chatbot",
             label: "9",
-            icon: File,
+            icon: Bot,
             variant: "ghost"
           },
           {
-            title: "Sent",
+            title: "Socials",
             label: "",
-            icon: Send,
+            icon: MessagesSquare,
             variant: "ghost"
           },
           {
-            title: "Junk",
+            title: "Emails",
             label: "23",
-            icon: ArchiveX,
+            icon: Mail,
+            variant: "ghost"
+          },
+          {
+            title: "Calls",
+            label: "",
+            icon: Phone,
             variant: "ghost"
           },
           {
@@ -85,38 +91,38 @@ export function NavDesktop({ isCollapsed }: NavDesktopProps) {
         isCollapsed={isCollapsed}
         links={[
           {
-            title: "Social",
+            title: "No Outcome",
             label: "972",
             icon: Users2,
-            dot: <span className="me-2 size-3.5 rounded-full bg-indigo-400 dark:bg-indigo-700" />,
+            dot: <span className="me-2 size-3.5 rounded-full bg-gray-400 dark:bg-gray-700" />,
             variant: "ghost"
           },
           {
-            title: "Updates",
+            title: "Lead Captured",
             label: "342",
             icon: AlertCircle,
-            dot: <span className="me-2 size-3.5 rounded-full bg-teal-400 dark:bg-teal-700" />,
+            dot: <span className="me-2 size-3.5 rounded-full bg-green-400 dark:bg-green-700" />,
             variant: "ghost"
           },
           {
-            title: "Forums",
+            title: "Lead Opportunity",
             label: "128",
             icon: MessagesSquare,
-            dot: <span className="me-2 size-3.5 rounded-full bg-orange-400 dark:bg-orange-700" />,
+            dot: <span className="me-2 size-3.5 rounded-full bg-yellow-400 dark:bg-yellow-700" />,
             variant: "ghost"
           },
           {
-            title: "Shopping",
+            title: "Unsuccessful",
             label: "8",
             icon: ShoppingCart,
-            dot: <span className="me-2 size-3.5 rounded-full bg-lime-400 dark:bg-lime-700" />,
+            dot: <span className="me-2 size-3.5 rounded-full bg-red-400 dark:bg-red-700" />,
             variant: "ghost"
           },
           {
-            title: "Promotions",
+            title: "Resolved",
             label: "21",
             icon: Archive,
-            dot: <span className="me-2 size-3.5 rounded-full bg-pink-400 dark:bg-pink-700" />,
+            dot: <span className="me-2 size-3.5 rounded-full bg-purple-400 dark:bg-purple-700" />,
             variant: "ghost"
           }
         ]}
