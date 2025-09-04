@@ -3,4 +3,5 @@ export * from "./generated-leads";
 export * from "./active-clients";
 export * from "./inbox-shortcut";
 export * from "./sentiment-analytics";
-export { TeamMembersCard, WhiteLabelAnalytics } from "@/app/dashboard/(auth)/default/components";
+export * from "./dashboard-credits";
+export { WhiteLabelAnalytics } from "@/app/dashboard/(auth)/default/components";

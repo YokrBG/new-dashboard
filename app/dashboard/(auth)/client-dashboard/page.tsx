@@ -8,7 +8,7 @@ import {
   GeneratedLeadsCard,
   InboxShortcutCard,
   SentimentAnalytics,
-  TeamMembersCard,
+  ClientCreditsDashboard,
   TotalConversationsCard,
   WhiteLabelAnalytics
 } from "@/app/dashboard/(auth)/client-dashboard/components";
@@ -39,7 +39,7 @@ export default function Page() {
         <TotalConversationsCard />
         <GeneratedLeadsCard />
         <ActiveClientsCard />
-        <TeamMembersCard />
+        <ClientCreditsDashboard />
         <div className="lg:col-span-2">
           <InboxShortcutCard />
         </div>

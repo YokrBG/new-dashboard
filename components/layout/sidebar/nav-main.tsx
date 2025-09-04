@@ -148,7 +148,7 @@ export const navItems: NavGroup[] = [
         href: "/dashboard/pages/empty-states/01",
         icon: TagIcon,
         items: [
-          { title: "Appearance", href: "/dashboard/pages/empty-states/01" },
+          { title: "Rebrand", href: "/dashboard/pages/white-label/rebrand" },
           { title: "Plans", href: "/dashboard/apps/api-keys" },
           { title: "Clients Billing", href: "/dashboard/pages/empty-states/02" },
         ]
@@ -166,7 +166,7 @@ export const navItems: NavGroup[] = [
       },
     ]
   },
-  {
+  /*{
     title: "Dashboards",
     items: [
       {
@@ -362,7 +362,7 @@ export const navItems: NavGroup[] = [
         newTab: true
       }
     ]
-  }
+  }*/
 ];
 
 export function NavMain() {
